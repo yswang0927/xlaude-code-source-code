@@ -3,34 +3,26 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": false,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "jsx": "react-jsx",
-    "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": ".",
+    "lib": ["ESNext"],
+    "types": ["bun-types", "node"],
     "paths": {
-      "bun:bundle": ["stubs/bun-bundle.ts"],
-      "src/*": ["src/*"]
+      "src/*": ["./src/*"]
     },
-    "types": ["node"],
-    "lib": ["ES2022", "DOM"],
-    "allowImportingTsExtensions": false,
-    "noEmit": false
+    "baseUrl": ".",
+    "rootDir": "."
   },
-  "include": [
-    "src/**/*",
-    "stubs/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "scripts/**/*.ts", "globals.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
