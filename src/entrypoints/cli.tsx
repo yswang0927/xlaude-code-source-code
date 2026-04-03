@@ -4,6 +4,14 @@ import { feature } from 'bun:bundle';
 // eslint-disable-next-line custom-rules/no-top-level-side-effects
 process.env.COREPACK_ENABLE_AUTO_PIN = '0';
 
+// yswang 修改连接本地模型
+//process.env.ANTHROPIC_API_KEY ??= '123456';
+//process.env.ANTHROPIC_BASE_URL ??= 'http://127.0.0.1:11434';
+//process.env.ANTHROPIC_MODEL ??= 'qwen3.5:9b';
+//process.env.ANTHROPIC_CUSTOM_MODEL_OPTION ??= 'qwen3.5:9b';
+//process.env.API_TIMEOUT_MS ??= '3000000';
+//process.env.CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC ??= '1';
+
 // Set max heap size for child processes in CCR environments (containers have 16GB)
 // eslint-disable-next-line custom-rules/no-top-level-side-effects, custom-rules/no-process-env-top-level, custom-rules/safe-env-boolean-check
 if (process.env.CLAUDE_CODE_REMOTE === 'true') {
