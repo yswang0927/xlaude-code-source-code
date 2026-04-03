@@ -83,8 +83,9 @@ export const getDebugFilter = memoize((): DebugFilter | null => {
 })
 
 export const isDebugToStdErr = memoize((): boolean => {
+  // yswang: -d2e -> -D
   return (
-    process.argv.includes('--debug-to-stderr') || process.argv.includes('-d2e')
+    process.argv.includes('--debug-to-stderr') || process.argv.includes('-D')
   )
 })
 
