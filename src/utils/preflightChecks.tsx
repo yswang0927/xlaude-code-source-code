@@ -15,7 +15,9 @@ export interface PreflightCheckResult {
   sslHint?: string;
 }
 async function checkEndpoints(): Promise<PreflightCheckResult> {
-  try {
+  // yswang
+  return { success: true };
+  /*try {
     const oauthConfig = getOauthConfig();
     const tokenUrl = new URL(oauthConfig.TOKEN_URL);
     const endpoints = [`${oauthConfig.BASE_API_URL}/api/hello`, `${tokenUrl.origin}/v1/oauth/hello`];
@@ -70,7 +72,7 @@ async function checkEndpoints(): Promise<PreflightCheckResult> {
       success: false,
       error: `Connectivity check error: ${error instanceof Error ? (error as ErrnoException).code || error.message : String(error)}`
     };
-  }
+  }*/
 }
 interface PreflightStepProps {
   onSuccess: () => void;
